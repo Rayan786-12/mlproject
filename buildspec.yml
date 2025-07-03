@@ -1,0 +1,18 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      python: 3.13  # change this if your app uses another runtime
+  build:
+    commands:
+      - echo "Building the application..."
+      # If you need to install dependencies, do it here, e.g.:
+      # - pip install -r requirements.txt -t .
+      - echo "Zipping application files..."
+      - zip -r ../app.zip .
+artifacts:
+  files:
+    - ../app.zip
+  discard-paths: yes
+

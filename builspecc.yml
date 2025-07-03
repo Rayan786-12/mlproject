@@ -1,0 +1,14 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo "Installing dependencies..."
+  build:
+    commands:
+      - echo "Zipping app into app.zip..."
+      - zip -r app.zip * .[^.]* || true
+
+artifacts:
+  files:
+    - app.zip
